@@ -25,5 +25,15 @@ namespace GGJ2021
 		{
 			selectionInputSystem.OnTileClick(this);
 		}
+
+		public void OnPointerEnter()
+		{
+			gameObject.transform.localScale = new Vector3(1.2f,1.2f,1.2f);
+		}
+
+		public void OnPointerExit()
+		{
+			gameObject.transform.localScale = new Vector3(1f,1f,1f);
+		}
 	}
 }

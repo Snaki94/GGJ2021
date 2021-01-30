@@ -24,6 +24,10 @@
 		Nineteen,
 		Twenty,
 		TwentyOne,
-		TwentyTwo
+		TwentyTwo,
+		TwentyThree,
+		TwentyFour,
+		TwentyFive,
+		TventySix
 	}
 }
