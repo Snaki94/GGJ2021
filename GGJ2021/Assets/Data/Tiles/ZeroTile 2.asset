@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ZeroTile 2
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 010743eda05c31643a3e82a5913265bf, type: 3}
+  color: {r: 0.99215686, g: 0.8980392, b: 0.0627451, a: 1}
   type: 2
