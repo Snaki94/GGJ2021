@@ -42,10 +42,11 @@ namespace GGJ2021
 		
 		private void ResetSelection()
 		{
-			// TODO: flip down
 			firstSelected.State = TileState.Unselected;
+			firstSelected.FlipDown();
 			firstSelected = null;
 			secondSelected.State = TileState.Unselected;
+			secondSelected.FlipDown();
 			secondSelected = null;
 		}
 	}
