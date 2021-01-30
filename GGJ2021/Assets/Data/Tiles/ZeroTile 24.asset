@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020b8e502407a5f46bd21cd90f6ef6df, type: 3}
   m_Name: ZeroTile 24
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 888af38546536684bb3d19ea6e8f2418, type: 3}
   type: 24
