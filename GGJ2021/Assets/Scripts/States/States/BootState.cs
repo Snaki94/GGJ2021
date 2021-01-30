@@ -1,20 +1,26 @@
-﻿using UnityEngine;
-
-namespace GGJ2021
+﻿namespace GGJ2021
 {
 	public class BootState : IState
 	{
+		private readonly IRoot root;
+		private readonly ILevelInitializer levelInitializer;
+		
+		public BootState(IRoot root, ILevelInitializer levelInitializer)
+		{
+			this.root = root;
+			this.levelInitializer = levelInitializer;
+		}
+		
 		public void Initialize()
 		{
-			Debug.Log("boot state initialized");
+			levelInitializer.InitializeLevel();
+			root.ChangeState<BeginGameState>();
 		}
 
 		public void Tick()
 		{}
 
 		public void Dispose()
-		{
-			Debug.Log("boot state disposed");
-		}
+		{}
 	}
 }
