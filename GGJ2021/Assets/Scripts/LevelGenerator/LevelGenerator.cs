@@ -19,8 +19,7 @@ namespace GGJ2021
 				TileData temp = tiles[i].Data; 
 				tiles[i].Data = tiles[newIndex].Data; 
 				tiles[newIndex].Data = temp; 
-				tiles[i].SetSprite();
-				tiles[i].SetColor();
+				tiles[i].Initialize();
 			} 
 		}
 	}

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,14 +21,19 @@ namespace GGJ2021
 		private bool isActive = false;
 
 		
-		public void Show()
+		public void Initialize()
 		{
-			gameObject.SetActive(true);
+			imageValue.sprite = Data.Sprite;
+			imageValue.color = Data.Color;
+			tileRevers.gameObject.SetActive(true);
+			tileAvers.gameObject.SetActive(true);
 		}
 		
 		public void Hide()
 		{
-			gameObject.SetActive(false);
+			tileRevers.gameObject.SetActive(false);
+			tileAvers.gameObject.SetActive(false);
+			gameObject.transform.DOScale(new Vector3(1f,1f,1f),0.5f);
 		}
 		
 		public void OnPointerClick()
@@ -50,16 +54,6 @@ namespace GGJ2021
 			gameObject.transform.DOScale((new Vector3(1f,1f,1f)),0.5f);
 		}
 
-		public void SetSprite()
-		{
-			imageValue.sprite = Data.Sprite;
-		}
-
-		public void SetColor()
-		{
-			imageValue.color = Data.Color;
-		}
-
 		void FlipUp()
 		{
 			if (isActive)
@@ -67,7 +61,7 @@ namespace GGJ2021
 			StartCoroutine(RotateToAvers());
 		}
 		
-		void FlipDown()
+		public void FlipDown()
 		{
 			if (isActive)
 				return;
