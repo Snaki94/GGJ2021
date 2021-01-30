@@ -14,7 +14,7 @@
 		public void Initialize()
 		{
 			levelInitializer.InitializeLevel();
-			root.ChangeState<BeginGameState>();
+			root.ChangeState<MainMenuState>();
 		}
 
 		public void Tick()
