@@ -6,6 +6,8 @@ namespace GGJ2021
 	{
 		[Inject]
 		private ISignalSystem signalSystem;
+		[Inject]
+		private IMatchSystem matchSystem;
 		
 		private Tile firstSelected;
 		private Tile secondSelected;
@@ -33,20 +35,29 @@ namespace GGJ2021
 		private void CollectTiles()
 		{
 			firstSelected.Hide();
-			firstSelected.State = TileState.Unselected;
-			firstSelected = null;
+			DeselectFirst();
 			secondSelected.Hide();
-			secondSelected.State = TileState.Unselected;
-			secondSelected = null;
+			DeselectSecond();
+			matchSystem.DecreaseCount();
 		}
 		
 		private void ResetSelection()
 		{
-			firstSelected.State = TileState.Unselected;
 			firstSelected.FlipDown();
-			firstSelected = null;
-			secondSelected.State = TileState.Unselected;
+			DeselectFirst();
 			secondSelected.FlipDown();
+			DeselectSecond();
+		}
+		
+		private void DeselectFirst()
+		{
+			firstSelected.State = TileState.Unselected;
+			firstSelected = null;
+		}
+		
+		private void DeselectSecond()
+		{
+			secondSelected.State = TileState.Unselected;
 			secondSelected = null;
 		}
 	}
