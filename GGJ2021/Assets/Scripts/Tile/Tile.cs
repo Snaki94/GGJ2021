@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using DG.Tweening;
+using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace GGJ2021
@@ -10,6 +14,13 @@ namespace GGJ2021
 		
 		[Inject]
 		private ISelectionInputSystem selectionInputSystem;
+
+		[SerializeField] private Transform tileRevers;
+		[SerializeField] private Transform tileAvers;
+		[SerializeField] private Image imageValue;
+		[SerializeField] private float flipSpeed = 0.2f;
+		private bool isActive = false;
+
 		
 		public void Show()
 		{
@@ -24,16 +35,64 @@ namespace GGJ2021
 		public void OnPointerClick()
 		{
 			selectionInputSystem.OnTileClick(this);
+			FlipUp();
 		}
 
 		public void OnPointerEnter()
 		{
-			gameObject.transform.localScale = new Vector3(1.2f,1.2f,1.2f);
+			DOTween.Pause(this);
+			gameObject.transform.DOScale((new Vector3(1.3f,1.3f,1.3f)),0.5f);
 		}
 
 		public void OnPointerExit()
 		{
-			gameObject.transform.localScale = new Vector3(1f,1f,1f);
+			DOTween.Pause(this);
+			gameObject.transform.DOScale((new Vector3(1f,1f,1f)),0.5f);
 		}
+
+		public void SetSprite()
+		{
+			imageValue.sprite = Data.Sprite;
+		}
+
+		public void SetColor()
+		{
+			imageValue.color = Data.Color;
+		}
+
+		void FlipUp()
+		{
+			if (isActive)
+				return;
+			StartCoroutine(RotateToAvers());
+		}
+		
+		void FlipDown()
+		{
+			if (isActive)
+				return;
+			StartCoroutine(RotateToRevers());
+		}
+
+		IEnumerator RotateToAvers()
+		{
+			isActive = true;
+			tileRevers.transform.DORotate(new Vector3(0, 90, 0), flipSpeed);
+			for (float i = flipSpeed; i >= 0; i -= Time.deltaTime)
+				yield return 0;
+			tileAvers.transform.DORotate(new Vector3(0, 0, 0), flipSpeed);
+			isActive = false;
+		}
+
+		IEnumerator RotateToRevers()
+		{
+			isActive = true;
+			tileAvers.transform.DORotate(new Vector3(0, 90, 0), flipSpeed);
+			for (float i = flipSpeed; i >= 0; i -= Time.deltaTime)
+				yield return 0;
+			tileRevers.transform.DORotate(new Vector3(0, 0, 0), flipSpeed);
+			isActive = false;
+		}
+	
 	}
 }
