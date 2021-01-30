@@ -3,6 +3,6 @@
 	public interface ISelectionSystem
 	{
 		void Select(Tile tile);
-		void Deselect(Tile tile);
+		void CheckSelection();
 	}
 }

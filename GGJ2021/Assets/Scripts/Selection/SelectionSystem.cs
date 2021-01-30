@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using Zenject;
 
 namespace GGJ2021
 {
 	public class SelectionSystem : ISelectionSystem
 	{
+		[Inject]
+		private ISignalSystem signalSystem;
+		
 		private Tile firstSelected;
 		private Tile secondSelected;
 		
@@ -15,16 +18,35 @@ namespace GGJ2021
 			else
 			{
 				secondSelected = tile;
-				Debug.Log("Selection finished");
+				signalSystem.FireSignal<TileSelectionFinished>();
 			}
 		}
-
-		public void Deselect(Tile tile)
+		
+		public void CheckSelection()
 		{
-			tile.State = TileState.Unselected;
-			firstSelected = null;
+			if(firstSelected.Data.Type == secondSelected.Data.Type)
+				CollectTiles();
+			else
+				ResetSelection();
 		}
 		
-		// TODO: reset selection
+		private void CollectTiles()
+		{
+			firstSelected.Hide();
+			firstSelected.State = TileState.Unselected;
+			firstSelected = null;
+			secondSelected.Hide();
+			secondSelected.State = TileState.Unselected;
+			secondSelected = null;
+		}
+		
+		private void ResetSelection()
+		{
+			// TODO: flip down
+			firstSelected.State = TileState.Unselected;
+			firstSelected = null;
+			secondSelected.State = TileState.Unselected;
+			secondSelected = null;
+		}
 	}
 }

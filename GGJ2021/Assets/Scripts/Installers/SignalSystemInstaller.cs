@@ -13,7 +13,7 @@ namespace GGJ2021
 
         private void DeclareSignals()
         {
-            //Container.DeclareSignal<TestSignal>();
+            Container.DeclareSignal<TileSelectionFinished>();
         }
     } 
 }

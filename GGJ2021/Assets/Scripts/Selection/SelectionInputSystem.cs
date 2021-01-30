@@ -25,20 +25,8 @@ namespace GGJ2021
 			if(!isEnabled)
 				return;
 
-			switch (tile.State)
-			{
-				case TileState.Selected:
-					selectionSystem.Deselect(tile);
-					break;
-				
-				case TileState.Unselected:
-					selectionSystem.Select(tile);
-					break;
-				
-				default:
-					Debug.LogError("Unknown state of the tile: " + tile.State);
-					break;
-			}
+			if(tile.State == TileState.Unselected)
+				selectionSystem.Select(tile);
 		}
 	}
 }
