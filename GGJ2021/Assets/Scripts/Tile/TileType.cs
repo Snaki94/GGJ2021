@@ -1,0 +1,29 @@
+﻿namespace GGJ2021
+{
+	public enum TileType
+	{
+		Zero,
+		One,
+		Two,
+		Three,
+		Four,
+		Five,
+		Six,
+		Seven,
+		Eight,
+		Nine,
+		Ten,
+		Eleven,
+		Twelve,
+		Thirtheen,
+		Fourteen,
+		Fifteen,
+		Sixteen,
+		Seventeen,
+		Eighteen,
+		Nineteen,
+		Twenty,
+		TwentyOne,
+		TwentyTwo
+	}
+}

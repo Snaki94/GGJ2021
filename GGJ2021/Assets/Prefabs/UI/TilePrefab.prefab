@@ -159,6 +159,8 @@ GameObject:
   - component: {fileID: 1866389082458128536}
   - component: {fileID: 3640381984842768813}
   - component: {fileID: 7274445560148043534}
+  - component: {fileID: 6813142417705524381}
+  - component: {fileID: 960286509669347259}
   m_Layer: 5
   m_Name: TilePrefab
   m_TagString: Untagged
@@ -216,6 +218,36 @@ MonoBehaviour:
   m_FlexibleWidth: 100
   m_FlexibleHeight: 100
   m_LayoutPriority: 1
+--- !u!114 &6813142417705524381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245260916136296224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6a8614a4338644ea665caea646096a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &960286509669347259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245260916136296224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 6813142417705524381}
+  _identifier: 
+  _useSceneContext: 0
+  _context: {fileID: 0}
+  _bindType: 0
 --- !u!1 &7206644689801350979
 GameObject:
   m_ObjectHideFlags: 0
