@@ -20,11 +20,6 @@ namespace GGJ2021
 				tiles[i].Data = tiles[newIndex].Data; 
 				tiles[newIndex].Data = temp; 
 			} 
-			
-			for (int i = 0; i < tiles.Length; i++)  
-			{ 
-				Debug.Log(tiles[i].Data.Type);
-			} 
 		}
 	}
 }
