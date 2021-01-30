@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using Zenject;
 
 namespace GGJ2021
@@ -28,12 +29,13 @@ namespace GGJ2021
 
 		public void OnPointerEnter()
 		{
-			gameObject.transform.localScale = new Vector3(1.2f,1.2f,1.2f);
+			gameObject.transform.DOScale((new Vector3(1.3f,1.3f,1.3f)),0.5f);
+
 		}
 
 		public void OnPointerExit()
 		{
-			gameObject.transform.localScale = new Vector3(1f,1f,1f);
+			gameObject.transform.DOScale((new Vector3(1f,1f,1f)),0.5f);
 		}
 	}
 }
