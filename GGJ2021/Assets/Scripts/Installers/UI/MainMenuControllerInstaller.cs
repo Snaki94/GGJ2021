@@ -8,6 +8,7 @@ namespace GGJ2021
 		{
 			Container.Bind<IMainMenuController>().To<MainMenuController>().FromResolve();
 			Container.Bind<ICreditsController>().To<CreditsController>().FromResolve();
+			Container.Bind<IGameplayController>().To<GameplayController>().FromResolve();
 		}
 	}
 }
