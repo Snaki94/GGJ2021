@@ -8,6 +8,8 @@ namespace GGJ2021
 		private ISignalSystem signalSystem;
 		[Inject]
 		private IMatchSystem matchSystem;
+		[Inject]
+		private ISoundSystem soundSystem;
 		
 		private Tile firstSelected;
 		private Tile secondSelected;
@@ -43,6 +45,7 @@ namespace GGJ2021
 		
 		private void ResetSelection()
 		{
+			soundSystem.PlayTestSound();
 			firstSelected.FlipDown();
 			DeselectFirst();
 			secondSelected.FlipDown();
