@@ -32,6 +32,7 @@ namespace GGJ2021
 				CollectTiles();
 			else
 				ResetSelection();
+			signalSystem.FireSignal<TileCheckingFinished>();
 		}
 		
 		private void CollectTiles()

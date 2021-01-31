@@ -14,6 +14,7 @@ namespace GGJ2021
         private void DeclareSignals()
         {
             Container.DeclareSignal<TileSelectionFinished>();
+            Container.DeclareSignal<TileCheckingFinished>();
         }
     } 
 }
