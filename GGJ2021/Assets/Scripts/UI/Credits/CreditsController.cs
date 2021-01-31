@@ -8,9 +8,13 @@ namespace GGJ2021
 		[Inject]
 		private IRoot root;
 		
+		[Inject]
+		private ISoundSystem soundSystem;
+		
 		public void Show()
 		{
 			gameObject.SetActive(true);
+			soundSystem.PlayCreditsEnterSound();
 		}
 
 		public void Hide()

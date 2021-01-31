@@ -39,6 +39,7 @@ namespace GGJ2021
 		
 		private void CollectTiles()
 		{
+			soundSystem.PlaySuccessSound();
 			firstSelected.Hide();
 			DeselectFirst();
 			secondSelected.Hide();
@@ -49,7 +50,7 @@ namespace GGJ2021
 		
 		private void ResetSelection()
 		{
-			soundSystem.PlayTestSound();
+			soundSystem.PlayFailureSound();
 			firstSelected.FlipDown();
 			firstSelected.ScaleDown();
 			DeselectFirst();

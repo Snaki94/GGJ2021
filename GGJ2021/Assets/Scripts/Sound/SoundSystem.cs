@@ -12,12 +12,31 @@ namespace GGJ2021
 			this.audioClips = audioClips;
 			this.audioSources = audioSources;
 		}
-		
-		public void PlayTestSound()
+		public void PlayFailureSound()
 		{
 			PlaySound(audioClips[0]);
 		}
 		
+		public void PlaySuccessSound()
+		{
+			PlaySound(audioClips[1]);
+		}
+
+		public void PlayFlipCardSound()
+		{
+			PlaySound(audioClips[2]);
+		}
+
+		public void PlayCreditsEnterSound()
+		{
+			PlaySound(audioClips[3]);
+		}
+
+		public void PlayStartSound()
+		{
+			PlaySound(audioClips[4]);
+		}
+
 		private void PlaySound(AudioClip clip)
 		{
 			AudioSource audioSource = FindFreeAudioSource();

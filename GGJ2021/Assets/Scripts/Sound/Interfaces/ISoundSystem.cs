@@ -2,6 +2,13 @@
 {
 	public interface ISoundSystem
 	{
-		void PlayTestSound();
+		void PlaySuccessSound();
+		void PlayFailureSound();
+
+		void PlayFlipCardSound();
+
+		void PlayCreditsEnterSound();
+
+		void PlayStartSound();
 	}
 }
