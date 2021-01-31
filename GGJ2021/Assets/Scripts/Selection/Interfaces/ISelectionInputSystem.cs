@@ -4,6 +4,8 @@
 	{
 		void Enable();
 		void Disable();
+		void OnTileEnter(Tile tile);
 		void OnTileClick(Tile tile);
+		void OnTileExit(Tile tile);
 	}
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using Zenject;
 
 namespace GGJ2021
@@ -20,13 +21,38 @@ namespace GGJ2021
 			isEnabled = false;
 		}
 
+		public void OnTileEnter(Tile tile)
+		{
+			if(!isEnabled)
+				return;
+
+			if(tile.State == TileState.Unselected)
+			{
+				tile.ScaleUp();
+			}
+		}
+
 		public void OnTileClick(Tile tile)
 		{
 			if(!isEnabled)
 				return;
 
 			if(tile.State == TileState.Unselected)
+			{
 				selectionSystem.Select(tile);
+				tile.FlipUp();
+			}
+		}
+
+		public void OnTileExit(Tile tile)
+		{
+			if(!isEnabled)
+				return;
+
+			if(tile.State == TileState.Unselected)
+			{
+				tile.ScaleDown();
+			}
 		}
 	}
 }

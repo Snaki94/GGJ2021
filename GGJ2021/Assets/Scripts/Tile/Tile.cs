@@ -35,26 +35,35 @@ namespace GGJ2021
 			tileAvers.gameObject.SetActive(false);
 			gameObject.transform.DOScale(new Vector3(1f,1f,1f),0.5f);
 		}
+
+		public void OnPointerEnter()
+		{
+			selectionInputSystem.OnTileEnter(this);
+		}
 		
 		public void OnPointerClick()
 		{
 			selectionInputSystem.OnTileClick(this);
-			FlipUp();
-		}
-
-		public void OnPointerEnter()
-		{
-			DOTween.Pause(this);
-			gameObject.transform.DOScale((new Vector3(1.3f,1.3f,1.3f)),0.5f);
 		}
 
 		public void OnPointerExit()
 		{
+			selectionInputSystem.OnTileExit(this);
+		}
+		
+		public void ScaleUp()
+		{
 			DOTween.Pause(this);
-			gameObject.transform.DOScale((new Vector3(1f,1f,1f)),0.5f);
+			transform.DOScale((new Vector3(1.3f,1.3f,1.3f)),0.5f);
+		}
+		
+		public void ScaleDown()
+		{
+			DOTween.Pause(this);
+			transform.DOScale((new Vector3(1f,1f,1f)),0.5f);
 		}
 
-		void FlipUp()
+		public void FlipUp()
 		{
 			if (isActive)
 				return;

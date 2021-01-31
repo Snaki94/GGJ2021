@@ -48,8 +48,10 @@ namespace GGJ2021
 		{
 			soundSystem.PlayTestSound();
 			firstSelected.FlipDown();
+			firstSelected.ScaleDown();
 			DeselectFirst();
 			secondSelected.FlipDown();
+			secondSelected.ScaleDown();
 			DeselectSecond();
 		}
 		

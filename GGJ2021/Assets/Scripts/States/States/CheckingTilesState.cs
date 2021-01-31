@@ -21,7 +21,7 @@
 		public void Initialize()
 		{
 			signalSystem.SubscribeSignal<TileCheckingFinished>(OnCheckingTilesFinished);
-			methodCaller.CallMethodAfterSeconds(selectionSystem.CheckSelection, 1.5f);
+			methodCaller.CallMethodAfterSeconds(selectionSystem.CheckSelection, 1f);
 		}
 
 		public void Tick()
