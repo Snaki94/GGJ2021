@@ -10,7 +10,9 @@ namespace GGJ2021
 		private IMatchSystem matchSystem;
 		[Inject]
 		private ISoundSystem soundSystem;
-		
+		[Inject]
+		private IScoreSystem scoreSystem;
+
 		private Tile firstSelected;
 		private Tile secondSelected;
 		
@@ -32,6 +34,7 @@ namespace GGJ2021
 				CollectTiles();
 			else
 				ResetSelection();
+			signalSystem.FireSignal<TileCheckingFinished>();
 		}
 		
 		private void CollectTiles()
@@ -41,14 +44,17 @@ namespace GGJ2021
 			secondSelected.Hide();
 			DeselectSecond();
 			matchSystem.DecreaseCount();
+			scoreSystem.IncreaseScore();
 		}
 		
 		private void ResetSelection()
 		{
 			soundSystem.PlayTestSound();
 			firstSelected.FlipDown();
+			firstSelected.ScaleDown();
 			DeselectFirst();
 			secondSelected.FlipDown();
+			secondSelected.ScaleDown();
 			DeselectSecond();
 		}
 		

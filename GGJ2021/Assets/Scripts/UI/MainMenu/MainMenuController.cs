@@ -8,6 +8,9 @@ namespace GGJ2021
 		[Inject]
 		private IRoot root;
 		
+		[Inject]
+		private ISoundSystem soundSystem;
+		
 		public void Show()
 		{
 			gameObject.SetActive(true);
@@ -21,6 +24,7 @@ namespace GGJ2021
 		public void OnStartButton()
 		{
 			root.ChangeState<BeginGameState>();
+			soundSystem.PlayStartSound();
 		}
 		
 		public void OnCreditsButton()
