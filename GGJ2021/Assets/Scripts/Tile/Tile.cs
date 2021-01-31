@@ -29,6 +29,8 @@ namespace GGJ2021
 			imageValue.color = Data.Color;
 			tileRevers.gameObject.SetActive(true);
 			tileAvers.gameObject.SetActive(true);
+			tileAvers.transform.eulerAngles = new Vector3(0, 90, 0);
+			tileRevers.transform.eulerAngles = new Vector3(0, 0, 0);
 		}
 		
 		public void Hide()
