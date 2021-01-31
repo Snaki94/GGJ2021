@@ -1,4 +1,6 @@
-﻿using Zenject;
+﻿using DG.Tweening;
+using UnityEngine;
+using Zenject;
 
 namespace GGJ2021
 {
@@ -16,6 +18,12 @@ namespace GGJ2021
 		{
 			turnSystem.GetCurrentPlayer().Score++;
 			turnSystem.GetCurrentPlayer().ScoreText.text = turnSystem.GetCurrentPlayer().Score.ToString();
+			
+			Sequence scoreSequence = DOTween.Sequence();
+			scoreSequence.Append(turnSystem.GetCurrentPlayer().ScoreText.transform.parent.DOScale((new Vector3(1.3f,1.3f,1.3f)),0.25f));
+			scoreSequence.Append(turnSystem.GetCurrentPlayer().ScoreText.transform.parent.DOScale((new Vector3(1f,1f,1f)),0.25f));
+			scoreSequence.Play();
+			
 		}
 
 		public void ResetScore()
