@@ -13,7 +13,7 @@ namespace GGJ2021
 		
 		public void Generate()
 		{
-			for (int i = tiles.Length - 1; i > 0; i--)  
+			for (int i = tiles.Length - 1; i >= 0; i--)  
 			{ 
 				int newIndex = Random.Range(0, i+1); 
 				TileData temp = tiles[i].Data; 

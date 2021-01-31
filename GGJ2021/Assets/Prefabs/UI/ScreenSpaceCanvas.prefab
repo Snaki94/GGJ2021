@@ -1844,7 +1844,7 @@ GameObject:
   - component: {fileID: 2865479881016382832}
   - component: {fileID: 3458151515609047813}
   - component: {fileID: 4453818936607215461}
-  - component: {fileID: 8885316570171026239}
+  - component: {fileID: 1470150567370618094}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -1949,12 +1949,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
-  - {fileID: 8885316570171026239}
+  - {fileID: 1470150567370618094}
   _identifier: 
   _useSceneContext: 0
   _context: {fileID: 0}
   _bindType: 0
---- !u!114 &8885316570171026239
+--- !u!114 &1470150567370618094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1963,9 +1963,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3988330492542895875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad813479754e464dba93a77730ed6b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f897e19a361bb46a80f881d3a2b5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text1: {fileID: 6610374040479482264}
+  text2: {fileID: 2734918538882661823}
 --- !u!1 &4173462149419000708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,8 +2905,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8885316570171026239}
-        m_MethodName: OnBackButton
+      - m_Target: {fileID: 1470150567370618094}
+        m_MethodName: OnRestartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
