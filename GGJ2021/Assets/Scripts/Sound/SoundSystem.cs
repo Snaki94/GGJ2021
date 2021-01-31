@@ -37,6 +37,11 @@ namespace GGJ2021
 			PlaySound(audioClips[4]);
 		}
 
+		public void PlayGameOverSound()
+		{
+			PlaySound(audioClips[5]);
+		}
+
 		private void PlaySound(AudioClip clip)
 		{
 			AudioSource audioSource = FindFreeAudioSource();

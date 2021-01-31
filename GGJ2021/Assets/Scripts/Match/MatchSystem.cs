@@ -9,7 +9,8 @@ namespace GGJ2021
 		
 		[Inject]
 		private IRoot root;
-		
+		[Inject]
+		private ISoundSystem soundSystem;
 		
 		private int tilesCount;
 		
@@ -27,6 +28,7 @@ namespace GGJ2021
 		
 		private void EndSet()
 		{
+			soundSystem.PlayGameOverSound();
 			root.ChangeState<GameOverState>();
 		}
 	}

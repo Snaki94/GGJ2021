@@ -10,5 +10,6 @@
 		void PlayCreditsEnterSound();
 
 		void PlayStartSound();
+		void PlayGameOverSound();
 	}
 }
