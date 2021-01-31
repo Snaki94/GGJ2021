@@ -1,11 +1,12 @@
-﻿using UnityEngine.UI;
+﻿using TMPro;
+using UnityEngine.UI;
 
 namespace GGJ2021
 {
 	public class SecondPlayer : Player
 	{
-		public SecondPlayer(Image token)
-			: base(token)
+		public SecondPlayer(Image token, TMP_Text scoreText)
+			: base(token, scoreText)
 		{}
 	}
 }

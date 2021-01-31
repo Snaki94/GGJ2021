@@ -4,5 +4,7 @@
 	{
 		void CreatePlayers();
 		void BeginNextPlayerTurn();
+		Player GetCurrentPlayer();
+		Player GetWaitingPlayer();
 	}
 }

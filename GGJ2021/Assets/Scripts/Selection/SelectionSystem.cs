@@ -10,7 +10,9 @@ namespace GGJ2021
 		private IMatchSystem matchSystem;
 		[Inject]
 		private ISoundSystem soundSystem;
-		
+		[Inject]
+		private IScoreSystem scoreSystem;
+
 		private Tile firstSelected;
 		private Tile secondSelected;
 		
@@ -42,6 +44,7 @@ namespace GGJ2021
 			secondSelected.Hide();
 			DeselectSecond();
 			matchSystem.DecreaseCount();
+			scoreSystem.IncreaseScore();
 		}
 		
 		private void ResetSelection()

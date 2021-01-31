@@ -31,5 +31,15 @@ namespace GGJ2021
 			currentPlayer.Token.gameObject.SetActive(true);
 			waitingPlayer.Token.gameObject.SetActive(false);
 		}
+
+		public Player GetCurrentPlayer()
+		{
+			return currentPlayer;
+		}
+
+		public Player GetWaitingPlayer()
+		{
+			return waitingPlayer;
+		}
 	}
 }
