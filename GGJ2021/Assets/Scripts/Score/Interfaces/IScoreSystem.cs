@@ -5,5 +5,6 @@
 		int GetScore();
 		void IncreaseScore();
 		void ResetScore();
+		string GetWinner();
 	}
 }

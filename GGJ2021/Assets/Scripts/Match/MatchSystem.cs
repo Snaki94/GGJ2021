@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace GGJ2021
 {
 	public class MatchSystem : IMatchSystem
 	{
 		private const int MAX_TILES_COUNT = 54;
+		
+		[Inject]
+		private IRoot root;
+		
 		
 		private int tilesCount;
 		
@@ -22,7 +27,7 @@ namespace GGJ2021
 		
 		private void EndSet()
 		{
-			Debug.Log("end set");
+			root.ChangeState<GameOverState>();
 		}
 	}
 }
