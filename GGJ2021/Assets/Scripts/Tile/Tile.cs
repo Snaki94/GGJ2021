@@ -14,6 +14,8 @@ namespace GGJ2021
 		[Inject]
 		private ISelectionInputSystem selectionInputSystem;
 
+		[Inject] private ISoundSystem soundSystem;
+
 		[SerializeField] private Transform tileRevers;
 		[SerializeField] private Transform tileAvers;
 		[SerializeField] private Image imageValue;
@@ -80,6 +82,7 @@ namespace GGJ2021
 		IEnumerator RotateToAvers()
 		{
 			isActive = true;
+			soundSystem.PlayFlipCardSound();
 			tileRevers.transform.DORotate(new Vector3(0, 90, 0), flipSpeed);
 			for (float i = flipSpeed; i >= 0; i -= Time.deltaTime)
 				yield return 0;
@@ -90,6 +93,7 @@ namespace GGJ2021
 		IEnumerator RotateToRevers()
 		{
 			isActive = true;
+			soundSystem.PlayFlipCardSound();
 			tileAvers.transform.DORotate(new Vector3(0, 90, 0), flipSpeed);
 			for (float i = flipSpeed; i >= 0; i -= Time.deltaTime)
 				yield return 0;
