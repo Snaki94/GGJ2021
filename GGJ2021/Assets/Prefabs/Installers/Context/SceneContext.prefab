@@ -35,6 +35,7 @@ Transform:
   - {fileID: 6698095334675076777}
   - {fileID: 4855349130379514353}
   - {fileID: 7929907864836095420}
+  - {fileID: 6770939008826555380}
   - {fileID: 2068063603739220694}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,6 +61,7 @@ MonoBehaviour:
   - {fileID: 7878408624916699118}
   - {fileID: 2639662925694346515}
   - {fileID: 6207965407235355436}
+  - {fileID: 5355100714677483399}
   - {fileID: 3906592120861055671}
   _installerPrefabs: []
   _autoRun: 1
@@ -281,6 +283,93 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa162b7fc62358d429507cbc43831be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &3706479067850073407
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7929907863921461031}
+    m_Modifications:
+    - target: {fileID: 3227229069988570397, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundSystemInstaller
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c129e0e85b55a341be96ad626442c54, type: 3}
+--- !u!4 &6770939008826555380 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7964398463698788043, guid: 4c129e0e85b55a341be96ad626442c54,
+    type: 3}
+  m_PrefabInstance: {fileID: 3706479067850073407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5355100714677483399 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8728306658059834040, guid: 4c129e0e85b55a341be96ad626442c54,
+    type: 3}
+  m_PrefabInstance: {fileID: 3706479067850073407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425bab7896f50b044a3158661021d748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5924428918960009978
