@@ -20,6 +20,7 @@ namespace GGJ2021
 		[SerializeField] private Transform tileAvers;
 		[SerializeField] private Image imageValue;
 		[SerializeField] private float flipSpeed = 0.2f;
+
 		private bool isActive = false;
 
 		

@@ -12,6 +12,8 @@ namespace GGJ2021
 		private ISoundSystem soundSystem;
 		[Inject]
 		private IScoreSystem scoreSystem;
+		[Inject]
+		private IAbilitySystem abilitySystem;
 
 		private Tile firstSelected;
 		private Tile secondSelected;
@@ -46,6 +48,7 @@ namespace GGJ2021
 			DeselectSecond();
 			matchSystem.DecreaseCount();
 			scoreSystem.IncreaseScore();
+			abilitySystem.AddMana();
 		}
 		
 		private void ResetSelection()

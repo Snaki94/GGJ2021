@@ -8,13 +8,15 @@
 		private readonly IMatchSystem matchSystem;
 		private readonly IGameplayController gameplayController;
 		private readonly IScoreSystem scoreSystem;
-		
+		private readonly IAbilitySystem abilitySystem;
+
 		public BeginGameState(IRoot root,
 			ILevelGenerator levelGenerator,
 			ITurnSystem turnSystem,
 			IMatchSystem matchSystem,
 			IGameplayController gameplayController,
-			IScoreSystem scoreSystem)
+			IScoreSystem scoreSystem,
+			IAbilitySystem abilitySystem)
 		{
 			this.root = root;
 			this.levelGenerator = levelGenerator;
@@ -22,6 +24,7 @@
 			this.matchSystem = matchSystem;
 			this.gameplayController = gameplayController;
 			this.scoreSystem = scoreSystem;
+			this.abilitySystem = abilitySystem;
 		}
 		
 		public void Initialize()
@@ -29,6 +32,7 @@
 			levelGenerator.Generate();
 			turnSystem.CreatePlayers();
 			scoreSystem.ResetScore();
+			abilitySystem.ResetMana();
 			matchSystem.StartSet();
 			root.ChangeState<PlayersTurnState>();
 			gameplayController.Show();
