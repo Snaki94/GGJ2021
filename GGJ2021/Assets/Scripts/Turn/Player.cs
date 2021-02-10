@@ -9,12 +9,16 @@ namespace GGJ2021
 		public TMP_Text ScoreText { get; }
 		public string Name { get; }
 		public int Score { get; set; }
+		public IPlayerController PlayerController { get; }
+		public IAbilitySystem AbilitySystem { get; }
 		
-		public Player(Image token, TMP_Text scoreText, string name)
+		public Player(Image token, TMP_Text scoreText, string name, IPlayerController playerController, IAbilitySystem abilitySystem)
 		{
 			Token = token;
 			ScoreText = scoreText;
 			Name = name;
+			PlayerController = playerController;
+			AbilitySystem = abilitySystem;
 		}
 	}
 }

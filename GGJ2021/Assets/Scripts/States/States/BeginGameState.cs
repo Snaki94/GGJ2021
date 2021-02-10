@@ -32,10 +32,13 @@
 			levelGenerator.Generate();
 			turnSystem.CreatePlayers();
 			scoreSystem.ResetScore();
-			abilitySystem.ResetMana();
 			matchSystem.StartSet();
 			root.ChangeState<PlayersTurnState>();
 			gameplayController.Show();
+			turnSystem.GetCurrentPlayer().PlayerController.HideAbilityPanel();
+			turnSystem.GetWaitingPlayer().PlayerController.HideAbilityPanel();
+			turnSystem.GetCurrentPlayer().AbilitySystem.ResetMana();
+			turnSystem.GetWaitingPlayer().AbilitySystem.ResetMana();
 		}
 
 		public void Tick()

@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace GGJ2021
 {
     public class AbilitySystem : IAbilitySystem
     {
-        [SerializeField]
-        private int manaTreshold = 2;
+        private const int MANA_TRESHOLD = 2;
+        
+        [Inject]
+        private ITurnSystem turnSystem;
 
         private int currentMana;
 
@@ -22,9 +25,9 @@ namespace GGJ2021
 
         private void EnableAbilitiesIfReady()
         {
-            if (currentMana >= manaTreshold)
+            if (currentMana >= MANA_TRESHOLD)
             {
-                // TODO: enable ui
+                turnSystem.GetCurrentPlayer().PlayerController.ShowAbilityPanel();
             }
         }
     }
