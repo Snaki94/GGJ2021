@@ -23,7 +23,7 @@ namespace GGJ2021
             EnableAbilitiesIfReady();
         }
 
-        private void EnableAbilitiesIfReady()
+        public void EnableAbilitiesIfReady()
         {
             if (currentMana >= MANA_TRESHOLD)
             {

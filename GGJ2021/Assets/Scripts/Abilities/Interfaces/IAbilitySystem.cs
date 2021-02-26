@@ -4,5 +4,6 @@
     {
         void ResetMana();
         void AddMana();
+        void EnableAbilitiesIfReady();
     }
 }

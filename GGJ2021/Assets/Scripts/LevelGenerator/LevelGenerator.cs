@@ -15,10 +15,12 @@ namespace GGJ2021
 		{
 			for (int i = tiles.Length - 1; i >= 0; i--)  
 			{ 
+				/*
 				int newIndex = Random.Range(0, i+1); 
 				TileData temp = tiles[i].Data; 
 				tiles[i].Data = tiles[newIndex].Data; 
 				tiles[newIndex].Data = temp; 
+				*/
 				tiles[i].Initialize();
 			} 
 		}

@@ -24,12 +24,19 @@ namespace GGJ2021
 			currentPlayer = waitingPlayer;
 			waitingPlayer = temp;
 			UpdateTurnToken();
+			UpdateAbilityPanel();
 		}
 		
 		private void UpdateTurnToken()
 		{
 			currentPlayer.Token.gameObject.SetActive(true);
 			waitingPlayer.Token.gameObject.SetActive(false);
+		}
+		
+		private void UpdateAbilityPanel()
+		{
+			currentPlayer.AbilitySystem.EnableAbilitiesIfReady();
+			waitingPlayer.PlayerController.HideAbilityPanel();
 		}
 
 		public Player GetCurrentPlayer()
